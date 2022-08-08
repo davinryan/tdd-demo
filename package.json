@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.47",
+    "@types/ramda": "^0.28.15",
     "@types/react": "^18.0.16",
     "@types/react-dom": "^18.0.6",
     "babel-jest": "^27.4.2",
@@ -42,6 +43,7 @@
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^7.0.1",
     "prompts": "^2.4.2",
+    "ramda": "^0.28.0",
     "react": "^18.2.0",
     "react-app-polyfill": "^3.0.0",
     "react-dev-utils": "^12.0.1",
@@ -65,7 +67,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "test:business": "mkdir -p reports/socialTests/business && npx ts-node node_modules/.bin/cucumber-js src/socialTests/business/features --require 'src/socialTests/business/**/*.ts' --format-options '{\"snippetInterface\": \"async-await\"}' --format json:reports/socialTests/business/report.cucumber.json --format summary --tags @integration --publish-quiet",
+    "test:business:report": "node src/socialTests/business/reporters/reporters.html.js"
   },
   "eslintConfig": {
     "extends": [
@@ -140,5 +144,12 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.5.1",
+    "@playwright/test": "^1.24.2",
+    "cucumber-html-reporter": "^5.5.0",
+    "playwright": "^1.24.2",
+    "ts-node": "^10.9.1"
   }
 }
