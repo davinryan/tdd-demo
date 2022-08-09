@@ -1,5 +1,4 @@
-import { After, Before, BeforeAll, ITestCaseHookParameter, setDefaultTimeout } from '@cucumber/cucumber'
-import { safeStringify } from '../util/util'
+import {After, Before, BeforeAll, ITestCaseHookParameter, setDefaultTimeout} from '@cucumber/cucumber'
 
 // tslint:disable:no-console
 
@@ -7,27 +6,28 @@ setDefaultTimeout(180000)
 
 // tslint:disable:only-arrow-functions
 
-Before({ tags: '@ignore' }, async function () {
+Before({tags: '@ignore'}, async function () {
   return 'skipped'
 })
 
-Before({ tags: '@debug' }, async function () {
+Before({tags: '@debug'}, async function () {
   this.debug = true
 })
 
-Before({ tags: '@unit' }, async function () {
+Before({tags: '@unit'}, async function () {
   return 'skipped'
 })
 
-Before({ tags: '@manual' }, async function () {
+Before({tags: '@manual'}, async function () {
   return 'skipped'
 })
 
 /**
  * Before each scenario hook
  */
-Before({ tags: '@integration' }, async function (scenario: ITestCaseHookParameter) {
+Before({tags: '@integration'}, async function (scenario: ITestCaseHookParameter) {
   this.context = {
+    ...this.context,
     scenario: {
       id: scenario.pickle.id,
       name: scenario.pickle.name,
@@ -35,8 +35,8 @@ Before({ tags: '@integration' }, async function (scenario: ITestCaseHookParamete
   }
 })
 
-After({ tags: '@integration' }, async function () {
-  this.attach(safeStringify({ context: this.context }), 'application/json')
+After({tags: '@integration'}, async function () {
+  // this.attach(safeStringify({ context: this.context.scenario }), 'application/json')
 })
 
 BeforeAll(async function () {

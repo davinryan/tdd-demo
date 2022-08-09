@@ -20,13 +20,7 @@ class App extends Component<AppProps, AppState> {
     super(props)
 
     this.state = {
-      tasks: [
-        {description: 'task1', id: 1},
-
-        {description: 'task2', id: 2},
-
-        {description: 'task3', id: 3}
-      ],
+      tasks: [],
 
       input: ''
     }

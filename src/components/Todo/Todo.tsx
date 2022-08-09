@@ -11,8 +11,8 @@ interface TodoProps {
 const Todo = (props: TodoProps) => (
   <div className='todo'>
     <>
-      {props.task.description}
-      <i className='right todoTask' onClick={() => props.onDelete(props.index)}>Delete</i>
+      <span className='todoDescription'>{props.task.description}</span>
+      <i className='todoDeleteButton right' onClick={() => props.onDelete(props.index)}>Delete</i>
     </>
   </div>
 )

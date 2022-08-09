@@ -16,7 +16,7 @@ const TodoList = (props: TodoListProps) => {
   console.log(toDoList)
 
   return (
-    <div className="toDoList">
+    <div className="todoList">
       {toDoList}
     </div>
   )

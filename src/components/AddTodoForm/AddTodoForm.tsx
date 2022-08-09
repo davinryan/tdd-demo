@@ -9,14 +9,14 @@ interface InputFormProps {
 
 const AddTodoForm = (props: InputFormProps) => {
   return (
-    <div className="input-form">
+    <div className="addTodoForm">
       <form onSubmit={props.onSubmit} id="myForm">
-        <input className="input"
+        <input className="todoDescription"
                type="text"
                placeholder="Add to-do"
                onChange={props.onChange}
         />
-        <button className="fas fa-plus-circle add">Add</button>
+        <button className="todoAdd">Add</button>
       </form>
     </div>
   )
