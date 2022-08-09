@@ -2,7 +2,6 @@ import React, {Component, FormEvent} from 'react'
 import TaskIndicator from '../../components/TaskIndicator/TaskIndicator'
 import AddTodoForm from '../../components/AddTodoForm/AddTodoForm'
 import TodoList from '../TodoList/TodoList'
-import {Task} from '../../components/Todo/Todo.types'
 
 import './App.css'
 
@@ -11,7 +10,7 @@ interface AppProps {
 }
 
 interface AppState {
-  tasks: Task[]
+  tasks: any[]
   input: string
 }
 
