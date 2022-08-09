@@ -8,5 +8,5 @@ Business Need: Ensure users can organise themselves by adding items to their tod
     When user:1 creates a todo:1 with description <description>
     Then todoList:1 contains todo:1 with description <description>
     Examples:
-      | description                 |
+      | description                   |
       | "Pick up my son from daycare" |
