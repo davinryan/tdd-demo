@@ -1,13 +1,13 @@
 import React, {FormEventHandler} from 'react'
 
-import './inputForm.css'
+import './CreateTodoForm.css'
 
 interface InputFormProps {
   onSubmit: FormEventHandler | undefined
   onChange: FormEventHandler | undefined
 }
 
-const InputForm = (props: InputFormProps) => {
+const CreateTodoForm = (props: InputFormProps) => {
   return (
     <div className="input-form">
       <form onSubmit={props.onSubmit} id="myForm">
@@ -16,11 +16,11 @@ const InputForm = (props: InputFormProps) => {
                placeholder="Add to-do"
                onChange={props.onChange}
         />
-        <button className="fas fa-plus-circle add"></button>
+        <button className="fas fa-plus-circle add">Add</button>
       </form>
     </div>
   )
 }
 
 
-export default InputForm
+export default CreateTodoForm

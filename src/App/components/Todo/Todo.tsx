@@ -1,6 +1,6 @@
 import React from 'react'
-import {Task} from './todo.types'
-import './todo.css'
+import {Task} from './Todo.types'
+import './Todo.css'
 
 interface TodoProps {
   task: Task

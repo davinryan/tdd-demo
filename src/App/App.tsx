@@ -1,10 +1,10 @@
 import React, {Component, FormEvent} from 'react'
-import TaskIndicator from './components/taskIndicator/TaskIndicator'
-import InputForm from './components/inputForm/InputForm'
-import TodoList from './components/toDoList/TodoList'
-import {Task} from './components/toDo/todo.types'
+import TaskIndicator from './components/TaskIndicator/TaskIndicator'
+import CreateTodoForm from './components/CreateTodoForm/CreateTodoForm'
+import TodoList from './containers/TodoList/TodoList'
+import {Task} from './components/Todo/Todo.types'
 
-import './app.css'
+import './App.css'
 
 interface AppProps {
 
@@ -61,7 +61,7 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div className="App">
-        <InputForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
+        <CreateTodoForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
 
         <TodoList tasks={this.state.tasks} onDelete={this.handleDelete}/>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './taskIndicator.css'
+import './TaskIndicator.css'
 
 interface TaskIndicatorProps {
   number: number

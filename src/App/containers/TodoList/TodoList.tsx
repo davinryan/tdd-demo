@@ -1,7 +1,7 @@
 import React from 'react'
-import Todo from '../toDo/Todo'
-import {Task} from '../toDo/todo.types'
-import './toDoList.css'
+import Todo from '../../components/Todo/Todo'
+import {Task} from '../../components/Todo/Todo.types'
+import './TodoList.css'
 
 interface TodoListProps {
   tasks: Task[]
