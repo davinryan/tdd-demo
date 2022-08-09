@@ -13,8 +13,6 @@ const TodoList = (props: TodoListProps) => {
     <Todo key={task.id} task={task} index={task.id} onDelete={props.onDelete}/>
   ))
 
-  console.log(toDoList)
-
   return (
     <div className="todoList">
       {toDoList}
