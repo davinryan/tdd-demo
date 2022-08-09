@@ -1,13 +1,13 @@
 import React, {FormEventHandler} from 'react'
 
-import './CreateTodoForm.css'
+import './AddTodoForm.css'
 
 interface InputFormProps {
   onSubmit: FormEventHandler | undefined
   onChange: FormEventHandler | undefined
 }
 
-const CreateTodoForm = (props: InputFormProps) => {
+const AddTodoForm = (props: InputFormProps) => {
   return (
     <div className="input-form">
       <form onSubmit={props.onSubmit} id="myForm">
@@ -23,4 +23,4 @@ const CreateTodoForm = (props: InputFormProps) => {
 }
 
 
-export default CreateTodoForm
+export default AddTodoForm

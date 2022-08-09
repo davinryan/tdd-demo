@@ -5,7 +5,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url('./App/App.logo.svg');
+    background-image: url('./containers/App/App.logo.svg');
     background-position: center;
     background-repeat: no-repeat;
 }

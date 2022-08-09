@@ -9,10 +9,10 @@ interface TodoProps {
 }
 
 const Todo = (props: TodoProps) => (
-  <div className="to-do">
+  <div className='todo'>
     <>
-      {props.task.task}
-      <i className="fas fa-minus-circle right" onClick={() => props.onDelete(props.index)}>Delete</i>
+      {props.task.description}
+      <i className='right todoTask' onClick={() => props.onDelete(props.index)}>Delete</i>
     </>
   </div>
 )

@@ -1,8 +1,8 @@
 import React, {Component, FormEvent} from 'react'
-import TaskIndicator from './components/TaskIndicator/TaskIndicator'
-import CreateTodoForm from './components/CreateTodoForm/CreateTodoForm'
-import TodoList from './containers/TodoList/TodoList'
-import {Task} from './components/Todo/Todo.types'
+import TaskIndicator from '../../components/TaskIndicator/TaskIndicator'
+import AddTodoForm from '../../components/AddTodoForm/AddTodoForm'
+import TodoList from '../TodoList/TodoList'
+import {Task} from '../../components/Todo/Todo.types'
 
 import './App.css'
 
@@ -21,11 +21,11 @@ class App extends Component<AppProps, AppState> {
 
     this.state = {
       tasks: [
-        {task: 'task1', id: 1},
+        {description: 'task1', id: 1},
 
-        {task: 'task2', id: 2},
+        {description: 'task2', id: 2},
 
-        {task: 'task3', id: 3}
+        {description: 'task3', id: 3}
       ],
 
       input: ''
@@ -42,7 +42,7 @@ class App extends Component<AppProps, AppState> {
     if (this.state.input === '') {
       return
     } else {
-      list = {task: this.state.input, id: this.state.tasks.length + 1}
+      list = {description: this.state.input, id: this.state.tasks.length + 1}
     }
 
 
@@ -61,7 +61,7 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div className="App">
-        <CreateTodoForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
+        <AddTodoForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
 
         <TodoList tasks={this.state.tasks} onDelete={this.handleDelete}/>
 
