@@ -68,7 +68,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test:unit": "node scripts/test.js",
-    "test:business": "mkdir -p reports/socialTests/business && npx ts-node node_modules/.bin/cucumber-js src/socialTests/business/features --require 'src/socialTests/business/**/*.ts' --format-options '{\"snippetInterface\": \"async-await\"}' --format json:reports/socialTests/business/report.cucumber.json --format summary --tags @integration --publish-quiet",
+    "test:business:init": "mkdir -p reports/socialTests/business",
+    "test:business:run": "npx cucumber-js --config ../tdd-demo/config/cucumber.js",
     "test:business:report": "node src/socialTests/business/reporters/reporters.html.js"
   },
   "eslintConfig": {
